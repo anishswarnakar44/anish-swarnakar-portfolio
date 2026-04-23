@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anish Swarnakar - Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script
         id="sap-ui-bootstrap"
         src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
@@ -23,74 +24,7 @@
     <script src="app/portfolio.js"></script>
 </head>
 <body class="sapUiBody" id="content">
-    <canvas id="particles-canvas"></canvas>
-    <script>
-    // Animated Particle System
-    (function() {
-        var c = document.getElementById('particles-canvas');
-        var ctx = c.getContext('2d');
-        var particles = [];
-        var max = 80;
-
-        function resize() {
-            c.width = window.innerWidth;
-            c.height = window.innerHeight;
-        }
-        resize();
-        window.addEventListener('resize', resize);
-
-        function Particle() {
-            this.x = Math.random() * c.width;
-            this.y = Math.random() * c.height;
-            this.vx = (Math.random() - 0.5) * 0.5;
-            this.vy = (Math.random() - 0.5) * 0.5;
-            this.r = Math.random() * 2 + 0.5;
-            var colors = ['0,255,255', '255,0,255', '0,150,255', '255,170,0'];
-            this.color = colors[Math.floor(Math.random() * colors.length)];
-            this.alpha = Math.random() * 0.5 + 0.1;
-        }
-
-        for (var i = 0; i < max; i++) {
-            particles.push(new Particle());
-        }
-
-        function draw() {
-            ctx.clearRect(0, 0, c.width, c.height);
-            for (var i = 0; i < particles.length; i++) {
-                var p = particles[i];
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(' + p.color + ',' + p.alpha + ')';
-                ctx.fill();
-                ctx.shadowBlur = 10;
-                ctx.shadowColor = 'rgba(' + p.color + ',0.3)';
-
-                p.x += p.vx;
-                p.y += p.vy;
-                if (p.x < 0 || p.x > c.width) p.vx *= -1;
-                if (p.y < 0 || p.y > c.height) p.vy *= -1;
-
-                // Draw connecting lines
-                for (var j = i + 1; j < particles.length; j++) {
-                    var p2 = particles[j];
-                    var dx = p.x - p2.x;
-                    var dy = p.y - p2.y;
-                    var dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 150) {
-                        ctx.beginPath();
-                        ctx.moveTo(p.x, p.y);
-                        ctx.lineTo(p2.x, p2.y);
-                        ctx.strokeStyle = 'rgba(0,255,255,' + (0.08 * (1 - dist/150)) + ')';
-                        ctx.lineWidth = 0.5;
-                        ctx.stroke();
-                    }
-                }
-            }
-            ctx.shadowBlur = 0;
-            requestAnimationFrame(draw);
-        }
-        draw();
-    })();
-    </script>
+    <div id="scene3d"></div>
+    <script src="app/scene3d.js"></script>
 </body>
 </html>

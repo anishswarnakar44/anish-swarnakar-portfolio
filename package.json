@@ -1,0 +1,11 @@
+{
+    "name": "anish-swarnakar-portfolio",
+    "version": "1.0.0",
+    "description": "Anish Swarnakar's Professional Portfolio built with SAP UI5",
+    "scripts": {
+        "start": "npx http-server webapp -p 8080 -o",
+        "serve": "npx http-server webapp -p 8080"
+    },
+    "author": "Anish Swarnakar",
+    "license": "MIT"
+}

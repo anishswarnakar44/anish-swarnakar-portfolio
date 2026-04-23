@@ -1,0 +1,148 @@
+{
+    "personal": {
+        "name": "Anish Swarnakar",
+        "title": "Software Engineer & ML Enthusiast",
+        "tagline": "B.Tech Computer Science | NIT Kolkata | CGPA: 9.11",
+        "email": "anishswarnakar57@gmail.com",
+        "phone": "+91 8617793338",
+        "location": "14, Shib Chandra Chatterjee Street, Belur Math, Howrah, West Bengal - 711202",
+        "github": "https://github.com/anishswarnakar44",
+        "linkedin": "https://www.linkedin.com/in/anish-swarnakar-83861922b/",
+        "avatar": "AS",
+        "aboutMe": "I am a passionate Computer Science graduate from Narula Institute of Technology (MAKAUT) with a strong CGPA of 9.11. I aim to build a long-term career in a field with opportunities for growth and leadership. I aspire to utilize my technical skills to enhance the organization. I am dedicated to working diligently to meet my goals and deliver top-notch performance. I am enthusiastic about applying my innovative abilities and expertise to successfully complete projects. My experience spans machine learning, data analysis, and software development."
+    },
+    "education": [
+        {
+            "degree": "B.Tech in Computer Science and Engineering",
+            "institution": "Narula Institute of Technology, Agarpara, Kolkata",
+            "university": "MAKAUT (Maulana Abul Kalam Azad University of Technology)",
+            "year": "2021 - 2025",
+            "score": "CGPA: 9.11",
+            "icon": "sap-icon://education",
+            "type": "Success",
+            "description": "Specialized in Computer Science with focus on Machine Learning, Data Structures & Algorithms, and Database Management Systems."
+        },
+        {
+            "degree": "ISC (Class XII)",
+            "institution": "Don Bosco School, Liluah",
+            "university": "CISCE Board",
+            "year": "2021",
+            "score": "90.17%",
+            "icon": "sap-icon://education",
+            "type": "Success",
+            "description": "Completed higher secondary education with distinction in Science stream."
+        },
+        {
+            "degree": "ICSE (Class X)",
+            "institution": "Agrasain Boys' School, Liluah",
+            "university": "CISCE Board",
+            "year": "2019",
+            "score": "90%",
+            "icon": "sap-icon://education",
+            "type": "Success",
+            "description": "Completed secondary education with outstanding academic performance."
+        }
+    ],
+    "skills": {
+        "programming": [
+            { "name": "C", "level": 85, "state": "Success" },
+            { "name": "Java", "level": 80, "state": "Success" },
+            { "name": "SQL", "level": 85, "state": "Success" },
+            { "name": "Python", "level": 80, "state": "Information" },
+            { "name": "HTML/CSS", "level": 70, "state": "Warning" },
+            { "name": "JavaScript", "level": 65, "state": "Warning" }
+        ],
+        "technical": [
+            { "name": "Machine Learning", "level": 80, "state": "Success" },
+            { "name": "Data Structures & Algorithms", "level": 85, "state": "Success" },
+            { "name": "Database Management (DBMS)", "level": 85, "state": "Success" },
+            { "name": "Google Colab", "level": 80, "state": "Information" },
+            { "name": "Git & GitHub", "level": 75, "state": "Information" },
+            { "name": "Data Analysis", "level": 75, "state": "Warning" }
+        ],
+        "soft": [
+            "Adaptable & Team Player",
+            "Leadership Quality",
+            "Ethical & Time Management",
+            "Analytical Thinker",
+            "Problem Solving",
+            "Effective Communication",
+            "Quick Learner",
+            "Detail Oriented"
+        ]
+    },
+    "projects": [
+        {
+            "title": "Online Payment Fraud Detection",
+            "technology": "Machine Learning | Python",
+            "description": "Developed a comprehensive machine learning model to detect fraudulent online payment transactions. The system analyzes transaction patterns, user behavior, and payment characteristics to identify potentially fraudulent activities in real-time. Implemented multiple classification algorithms including Random Forest, Logistic Regression, and XGBoost to achieve high accuracy in fraud prediction.",
+            "features": [
+                "Real-time fraud detection using ML algorithms",
+                "Feature engineering from transaction metadata",
+                "Model comparison and ensemble techniques",
+                "Data preprocessing and handling imbalanced datasets",
+                "Performance evaluation with precision, recall, and F1-score"
+            ],
+            "icon": "sap-icon://money-bills",
+            "status": "Completed",
+            "tools": "Python, Scikit-learn, Pandas, NumPy, Google Colab"
+        },
+        {
+            "title": "Rock and Mine Detection",
+            "technology": "Machine Learning | Python",
+            "description": "Built a sonar data classification system using machine learning to distinguish between rocks and mines based on sonar signal returns. The project involved processing 60 frequency band features from sonar signals and applying supervised learning techniques to accurately classify underwater objects.",
+            "features": [
+                "Sonar signal data preprocessing and analysis",
+                "Feature selection and dimensionality reduction",
+                "Binary classification using Logistic Regression & SVM",
+                "Cross-validation for model robustness",
+                "Visualization of signal patterns and decision boundaries"
+            ],
+            "icon": "sap-icon://geographic-bubble-chart",
+            "status": "Completed",
+            "tools": "Python, Scikit-learn, Pandas, Matplotlib, Google Colab"
+        }
+    ],
+    "achievements": [
+        {
+            "title": "Research Paper Publication",
+            "description": "Published a paper in Indian Journal of Natural Science on modification of PVC. ISSN: 0976-0997. The research explored innovative approaches to modify PVC properties using poly alkyl acrylate mixtures.",
+            "icon": "sap-icon://document",
+            "year": "2024"
+        },
+        {
+            "title": "Best Presenter Award",
+            "description": "Received the Best Presenter Award for the research topic 'Effect of Poly Alkyl Acrylate Mixture on PVC for Property Modification' at an academic conference.",
+            "icon": "sap-icon://competitor",
+            "year": "2024"
+        },
+        {
+            "title": "Machine Learning Internship Certificate",
+            "description": "Successfully completed a Certificate of Training and Internship in Machine Learning (Python) at Ardent Computech Pvt. Ltd., gaining hands-on experience with real-world ML projects.",
+            "icon": "sap-icon://badge",
+            "year": "2024"
+        }
+    ],
+    "languages": [
+        { "name": "English", "level": "Professional Proficiency", "percent": 90 },
+        { "name": "Hindi", "level": "Native/Bilingual", "percent": 95 },
+        { "name": "Bengali", "level": "Native/Bilingual", "percent": 100 }
+    ],
+    "interests": [
+        { "name": "Playing Tabla", "icon": "sap-icon://music" },
+        { "name": "Machine Learning Research", "icon": "sap-icon://lab" },
+        { "name": "Open Source Contribution", "icon": "sap-icon://source-code" },
+        { "name": "Problem Solving", "icon": "sap-icon://puzzle" },
+        { "name": "Reading Tech Blogs", "icon": "sap-icon://newspaper" },
+        { "name": "Photography", "icon": "sap-icon://camera" }
+    ],
+    "timeline": [
+        { "year": "2019", "event": "Completed ICSE from Agrasain Boys' School with 90%" },
+        { "year": "2021", "event": "Completed ISC from Don Bosco School with 90.17%" },
+        { "year": "2021", "event": "Started B.Tech in CSE at Narula Institute of Technology" },
+        { "year": "2023", "event": "Completed ML Internship at Ardent Computech" },
+        { "year": "2024", "event": "Published Research Paper in Indian Journal of Natural Science" },
+        { "year": "2024", "event": "Won Best Presenter Award at Academic Conference" },
+        { "year": "2025", "event": "Graduating B.Tech with CGPA 9.11" }
+    ]
+}

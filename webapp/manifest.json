@@ -1,0 +1,67 @@
+{
+    "_version": "1.58.0",
+    "sap.app": {
+        "id": "portfolio",
+        "type": "application",
+        "title": "Anish Swarnakar - Portfolio",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "description": "Professional Portfolio built with SAP UI5"
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "rootView": {
+            "viewName": "portfolio.view.App",
+            "type": "XML",
+            "id": "app",
+            "async": true
+        },
+        "dependencies": {
+            "minUI5Version": "1.108.0",
+            "libs": {
+                "sap.m": {},
+                "sap.f": {},
+                "sap.ui.layout": {},
+                "sap.tnt": {},
+                "sap.ui.core": {}
+            }
+        },
+        "models": {
+            "portfolio": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "model/portfolioData.json"
+            }
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "portfolio.view",
+                "controlId": "appContainer",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [
+                {
+                    "name": "home",
+                    "pattern": "",
+                    "target": "home"
+                }
+            ],
+            "targets": {
+                "home": {
+                    "viewName": "Home",
+                    "viewLevel": 1
+                }
+            }
+        }
+    }
+}

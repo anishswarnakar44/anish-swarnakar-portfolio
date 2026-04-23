@@ -1,0 +1,456 @@
+/* ============================================
+   GAMING THEME - CYBERPUNK NEON PORTFOLIO
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #0a0a0f !important;
+    overflow-x: hidden;
+}
+
+/* Override SAP UI5 Shell and Page backgrounds */
+.sapMShell, .sapMShellBG,
+.sapMPage, .sapMPageBgStandard,
+.sapMPanel, .sapMPanelContent {
+    background: transparent !important;
+}
+
+.sapMShell > .sapMShellCentralArea {
+    background: #0a0a0f !important;
+}
+
+/* Global text color override */
+.sapMText, .sapMLabel, .sapMTitle, .sapMLnk,
+.sapMObjStatusText, .sapMSLITitle, .sapMSLIDescription {
+    color: #e0e0ff !important;
+    font-family: 'Rajdhani', sans-serif !important;
+}
+
+.sapMTitle {
+    font-family: 'Orbitron', sans-serif !important;
+    letter-spacing: 1px;
+}
+
+/* ============ ANIMATED BACKGROUND ============ */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(0, 255, 255, 0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(255, 0, 255, 0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 100%, rgba(0, 100, 255, 0.05) 0%, transparent 50%);
+    z-index: -1;
+    animation: bgPulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes bgPulse {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Scanning line effect */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, transparent, #00ffff, transparent);
+    z-index: 1000;
+    animation: scanLine 4s linear infinite;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+@keyframes scanLine {
+    0% { top: -2px; }
+    100% { top: 100vh; }
+}
+
+/* ============ HERO SECTION ============ */
+.heroSection {
+    background: linear-gradient(135deg, #0d0d1a 0%, #1a0a2e 50%, #0a1628 100%) !important;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow:
+        0 0 30px rgba(0, 255, 255, 0.1),
+        0 0 60px rgba(255, 0, 255, 0.05),
+        inset 0 0 30px rgba(0, 255, 255, 0.03);
+    position: relative;
+    overflow: hidden;
+    animation: heroGlow 3s ease-in-out infinite alternate;
+}
+
+.heroSection::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(0,255,255,0.03), transparent, rgba(255,0,255,0.03), transparent);
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes heroGlow {
+    0% { box-shadow: 0 0 30px rgba(0,255,255,0.1), 0 0 60px rgba(255,0,255,0.05); }
+    100% { box-shadow: 0 0 40px rgba(0,255,255,0.2), 0 0 80px rgba(255,0,255,0.1); }
+}
+
+.heroSection .sapMTitle {
+    color: #00ffff !important;
+    text-shadow: 0 0 10px rgba(0,255,255,0.5), 0 0 20px rgba(0,255,255,0.3);
+    font-size: 2.2rem !important;
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px rgba(0,255,255,0.5); }
+    100% { text-shadow: 0 0 20px rgba(0,255,255,0.8), 0 0 40px rgba(0,255,255,0.4); }
+}
+
+.heroSection .sapMLabel {
+    color: #ff00ff !important;
+    text-shadow: 0 0 8px rgba(255,0,255,0.4);
+    font-size: 1.1rem !important;
+}
+
+.heroSection .sapMText {
+    color: #b0b0ff !important;
+}
+
+.heroSection .sapMBtn .sapMBtnInner {
+    color: #00ffff !important;
+    border: 1px solid rgba(0,255,255,0.4) !important;
+    background: rgba(0,255,255,0.05) !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    text-shadow: 0 0 5px rgba(0,255,255,0.3);
+}
+
+.heroSection .sapMBtn .sapMBtnInner:hover {
+    background: rgba(0,255,255,0.15) !important;
+    box-shadow: 0 0 20px rgba(0,255,255,0.3) !important;
+    transform: translateY(-2px);
+}
+
+/* Avatar neon ring */
+.heroSection .sapFAvatar {
+    box-shadow: 0 0 15px rgba(0,255,255,0.4), 0 0 30px rgba(255,0,255,0.2);
+    border: 2px solid rgba(0,255,255,0.5) !important;
+    animation: avatarPulse 3s ease-in-out infinite;
+}
+
+@keyframes avatarPulse {
+    0%, 100% { box-shadow: 0 0 15px rgba(0,255,255,0.4); }
+    50% { box-shadow: 0 0 25px rgba(255,0,255,0.5), 0 0 40px rgba(0,255,255,0.3); }
+}
+
+/* ============ STAT BOXES ============ */
+.statBox {
+    text-align: center;
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(0,255,255,0.08), rgba(255,0,255,0.05)) !important;
+    border: 1px solid rgba(0,255,255,0.2);
+    min-width: 130px;
+    margin: 0.5rem;
+    box-shadow: 0 0 15px rgba(0,255,255,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.statBox::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0,255,255,0.1), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    100% { left: 100%; }
+}
+
+.statBox:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 0 30px rgba(0,255,255,0.3), 0 0 60px rgba(255,0,255,0.1);
+    border-color: rgba(0,255,255,0.5);
+}
+
+.statBox .sapMTitle {
+    color: #00ffff !important;
+    text-shadow: 0 0 8px rgba(0,255,255,0.5);
+    font-size: 1.8rem !important;
+}
+
+.statBox .sapMText {
+    color: #a0a0d0 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem !important;
+}
+
+/* ============ ICON TAB BAR ============ */
+.sapMITB {
+    background: rgba(10,10,20,0.8) !important;
+    border: 1px solid rgba(0,255,255,0.1) !important;
+    border-radius: 12px !important;
+}
+
+.sapMITBHead {
+    background: rgba(15,15,30,0.9) !important;
+}
+
+.sapMITBFilter .sapMITBText {
+    color: #8080b0 !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 0.7rem !important;
+}
+
+.sapMITBSelected .sapMITBText {
+    color: #00ffff !important;
+    text-shadow: 0 0 8px rgba(0,255,255,0.5);
+}
+
+.sapMITBContentArrow {
+    border-bottom-color: rgba(0,255,255,0.3) !important;
+}
+
+/* ============ PANELS ============ */
+.sapMPanel {
+    background: rgba(10,10,25,0.6) !important;
+    border: 1px solid rgba(0,255,255,0.1) !important;
+    border-radius: 12px !important;
+    backdrop-filter: blur(10px);
+}
+
+.sapMPanelHdr {
+    color: #00ffff !important;
+    font-family: 'Orbitron', sans-serif !important;
+    text-shadow: 0 0 5px rgba(0,255,255,0.3);
+    border-bottom: 1px solid rgba(0,255,255,0.1) !important;
+    background: rgba(0,255,255,0.03) !important;
+}
+
+/* ============ EDUCATION CARDS ============ */
+.eduCard {
+    border-left: 3px solid #00ffff !important;
+    border-radius: 8px !important;
+    background: rgba(10,15,30,0.7) !important;
+    box-shadow: 0 0 10px rgba(0,255,255,0.08);
+    border: 1px solid rgba(0,255,255,0.1) !important;
+    border-left: 3px solid #00ffff !important;
+    transition: all 0.3s ease;
+}
+
+.eduCard:hover {
+    box-shadow: 0 0 25px rgba(0,255,255,0.2);
+    transform: translateX(4px);
+}
+
+/* ============ PROJECT CARDS ============ */
+.projectCard {
+    border-left: 3px solid #ff00ff !important;
+    border-radius: 8px !important;
+    background: rgba(15,10,30,0.7) !important;
+    box-shadow: 0 0 10px rgba(255,0,255,0.08);
+    border: 1px solid rgba(255,0,255,0.1) !important;
+    border-left: 3px solid #ff00ff !important;
+    transition: all 0.3s ease;
+}
+
+.projectCard:hover {
+    box-shadow: 0 0 25px rgba(255,0,255,0.2);
+    transform: translateX(4px);
+}
+
+/* ============ ACHIEVEMENT CARDS ============ */
+.achieveCard {
+    border-left: 3px solid #ffaa00 !important;
+    border-radius: 8px !important;
+    background: rgba(20,15,10,0.7) !important;
+    box-shadow: 0 0 10px rgba(255,170,0,0.08);
+    border: 1px solid rgba(255,170,0,0.1) !important;
+    border-left: 3px solid #ffaa00 !important;
+    transition: all 0.3s ease;
+}
+
+.achieveCard:hover {
+    box-shadow: 0 0 25px rgba(255,170,0,0.2);
+}
+
+/* ============ PROGRESS INDICATORS ============ */
+.sapMPI {
+    background: rgba(255,255,255,0.05) !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(0,255,255,0.1) !important;
+}
+
+.sapMPIBarSuccess {
+    background: linear-gradient(90deg, #00cc88, #00ffaa) !important;
+    box-shadow: 0 0 8px rgba(0,255,170,0.4);
+    border-radius: 8px !important;
+}
+
+.sapMPIBarInformation {
+    background: linear-gradient(90deg, #0088ff, #00ccff) !important;
+    box-shadow: 0 0 8px rgba(0,200,255,0.4);
+    border-radius: 8px !important;
+}
+
+.sapMPIBarWarning {
+    background: linear-gradient(90deg, #ff8800, #ffaa00) !important;
+    box-shadow: 0 0 8px rgba(255,170,0,0.4);
+    border-radius: 8px !important;
+}
+
+.sapMPITextLeft, .sapMPITextRight {
+    color: #c0c0e0 !important;
+}
+
+/* ============ TIMELINE ============ */
+.timelineItem {
+    border-left: 2px solid #00ffff;
+    padding-left: 20px;
+    margin-left: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timelineItem:hover {
+    border-left-color: #ff00ff;
+}
+
+.timelineItem::before {
+    content: '';
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: #00ffff;
+    position: absolute;
+    left: -7px; top: 6px;
+    box-shadow: 0 0 10px rgba(0,255,255,0.5);
+    animation: dotPulse 2s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+    0%, 100% { box-shadow: 0 0 5px rgba(0,255,255,0.3); }
+    50% { box-shadow: 0 0 15px rgba(0,255,255,0.7); }
+}
+
+/* ============ SOFT SKILL TAGS ============ */
+.softSkillTag {
+    display: inline-block;
+    padding: 6px 16px;
+    margin: 4px;
+    border-radius: 20px;
+    background: rgba(0,255,255,0.08);
+    color: #00ffff !important;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid rgba(0,255,255,0.25);
+    font-family: 'Rajdhani', sans-serif;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(0,255,255,0.2);
+}
+
+.softSkillTag:hover {
+    background: rgba(0,255,255,0.15);
+    box-shadow: 0 0 15px rgba(0,255,255,0.3);
+    transform: scale(1.05);
+}
+
+/* ============ LINKS ============ */
+.sapMLnk {
+    color: #00ccff !important;
+    text-shadow: 0 0 5px rgba(0,200,255,0.2);
+}
+
+.sapMLnk:hover {
+    color: #00ffff !important;
+    text-shadow: 0 0 10px rgba(0,255,255,0.5);
+}
+
+/* ============ ICONS ============ */
+.sapUiIcon {
+    color: #00ffff !important;
+}
+
+/* ============ OBJECT STATUS ============ */
+.sapMObjStatusSuccess .sapMObjStatusIcon,
+.sapMObjStatusSuccess .sapMObjStatusText {
+    color: #00ffaa !important;
+    text-shadow: 0 0 5px rgba(0,255,170,0.3);
+}
+
+.sapMObjStatusInformation .sapMObjStatusText {
+    color: #00ccff !important;
+}
+
+/* ============ LIST ITEMS ============ */
+.sapMLIB {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(0,255,255,0.05) !important;
+}
+
+.sapMLIB:hover {
+    background: rgba(0,255,255,0.03) !important;
+}
+
+/* ============ FOOTER ============ */
+.footerSection {
+    background: linear-gradient(135deg, #0d0d1a, #1a0a2e) !important;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid rgba(0,255,255,0.15);
+    box-shadow: 0 0 20px rgba(0,255,255,0.05);
+}
+
+.footerSection .sapMText,
+.footerSection .sapMTitle {
+    color: #8080b0 !important;
+}
+
+.footerSection .sapMTitle {
+    color: #00ffff !important;
+    text-shadow: 0 0 8px rgba(0,255,255,0.3);
+}
+
+/* ============ SCROLLBAR ============ */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a15;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00ffff, #ff00ff);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #00ffff, #ffaa00);
+}
+
+/* ============ PARTICLE CANVAS ============ */
+#particles-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}

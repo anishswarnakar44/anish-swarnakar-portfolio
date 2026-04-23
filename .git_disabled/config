@@ -1,0 +1,18 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[user]
+	email = anishswarnakar57@gmail.com
+	name = Anish Swarnakar
+[remote "origin"]
+	url = https://github.tools.sap/I578409/anish-swarnakar-portfolio.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = personal
+[remote "personal"]
+	url = https://github.com/anishswarnakar44/anish-swarnakar-portfolio.git
+	fetch = +refs/heads/*:refs/remotes/personal/*
